@@ -1,4 +1,4 @@
-node-testable-module
-====================
+flexible-loader
+===============
 
-You can start with this project if you want to develop a node module which should be testable 
+A flexible dependency loader for nodejs
