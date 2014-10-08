@@ -1,0 +1,29 @@
+{
+  "name": "flexible-loader",
+  "version": "0.0.1",
+  "description": "A flexible dependency loader for nodejs",
+  "main": "flexible-loader.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/friedolinfoerder/flexible-loader"
+  },
+  "keywords": [
+    "module",
+    "development"
+  ],
+  "author": "friedolin foerder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/friedolinfoerder/flexible-loader/issues"
+  },
+  "homepage": "https://github.com/friedolinfoerder/flexible-loader",
+  "devDependencies": {
+    "grunt-jasmine-node-coverage": "~0.1.11",
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-watch": "~0.6.1"
+  }
+}
