@@ -9,14 +9,14 @@ Usage:
 var loader = require('flexible-loader');
 
 // configuration    
-loader.setPath(__dirname);
-
-loader.addLoader('model', function(path, identifier) {
-    require(path + '/models/' + identifier.toLowerCase());
-});
-loader.addLoader('controller', function(path, identifier) {
-    require(path + '/controllers/' + identifier.toLowerCase());
-});
+loader
+    .setPath(__dirname)
+    .addLoader('model', function(path, identifier) {
+        require(path + '/models/' + identifier.toLowerCase());
+    })
+    .addLoader('controller', function(path, identifier) {
+        require(path + '/controllers/' + identifier.toLowerCase());
+    });
 
 // loading
 var UserModel = loader.model('User'),
