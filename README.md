@@ -3,7 +3,8 @@ flexible-loader
 
 A flexible dependency loader for nodejs which allows easy testing.
 
-Usage:
+Usage
+-----
 
 ``` javascript
 var loader = require('flexible-loader');
