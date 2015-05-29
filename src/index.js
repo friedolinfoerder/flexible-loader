@@ -81,13 +81,19 @@ exports.addLoader = function(name, callback) {
         var returnValue = callback.call(exports, projectPath, identifier);
         
         var filename = req.resolve(returnValue),
-            cached = req.cache[filename];
+            cached = req.cache[filename],
+            isCached = !!cached;
         
         // delete cache
         delete req.cache[filename];
         var moduleToTest = req(returnValue);
         // restore cache
-        req.cache[filename] = cached;
+        if(isCached) {
+            req.cache[filename] = cached;
+        } else {
+            delete req.cache[filename];
+        }
+        
 
         // reset the normal loader function
         for(var loaderName in loaders) {
