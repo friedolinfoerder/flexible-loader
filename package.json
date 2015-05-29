@@ -1,6 +1,6 @@
 {
   "name": "flexible-loader",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A flexible dependency loader for nodejs",
   "main": "flexible-loader.js",
   "scripts": {
