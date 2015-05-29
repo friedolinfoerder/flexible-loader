@@ -80,12 +80,15 @@ exports.addLoader = function(name, callback) {
         
         var returnValue = callback.call(exports, projectPath, identifier);
         
-        var filename = req.resolve(returnValue);
-        if(req.cache[filename]) {
-            delete req.cache[filename];
-        }
-        var moduleToTest = req(returnValue);
+        var filename = req.resolve(returnValue),
+            cached = req.cache[filename];
         
+        // delete cache
+        delete req.cache[filename];
+        var moduleToTest = req(returnValue);
+        // restore cache
+        req.cache[filename] = cached;
+
         // reset the normal loader function
         for(var loaderName in loaders) {
             exports[loaderName] = loaders[loaderName];
